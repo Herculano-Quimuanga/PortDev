@@ -108,7 +108,7 @@ nav{
 }
 
 .btn-main{
-    padding: calc(.75rem + 2px) 1.5rem;
+    padding: calc(.55rem + 2px) 1.5rem;
     outline: none;
     border: none;
     font-size: 1rem;
@@ -117,6 +117,7 @@ nav{
     border-radius: 6px;
     transition: .5s;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .btn:hover{
@@ -205,7 +206,7 @@ nav{
     font-size: 2rem;
     font-weight: 800;
     line-height: 2.5rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     text-align: center;
     font-family: 'Montserrat-M';
 }
@@ -217,7 +218,7 @@ nav{
 .header-content .section-description{
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--extra-light);
+    color: var(--text-light);
     width: auto;
 }
 
@@ -234,9 +235,8 @@ nav{
     align-items: center;
     gap: 5px;
     font-size: 1rem;
-
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .header-btns a span{
@@ -247,7 +247,7 @@ nav{
 .header-btns a:hover{
     color: var(--primary-color);
 }
-
+/*
 .stats-container{
     display: flex;
     gap: 1rem;
@@ -272,7 +272,7 @@ nav{
 .stats-card p{
     font-size: 1.2rem;
     color: var(--text-light);
-}
+}*/
 
 .skill-container{
     display: grid;
@@ -297,7 +297,7 @@ nav{
 .skill-card{
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
 }
 
 .skill-card span{
@@ -487,8 +487,8 @@ nav{
 }
 
 .hexagon{
-    width: 100px;
-    height: 105px;
+    width: 120px;
+    height: 125px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     display: flex;
     align-items: center;
@@ -506,8 +506,24 @@ nav{
     }
 }
 
+.except{
+    background-color: var(--back-color);
+}
+
 .hexagon i{
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+.i-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--text-light);
+    }
 }
 .know{
     position: relative;
@@ -522,8 +538,8 @@ nav{
    padding: 5px 8px;
    position: absolute;
    z-index: 1;
-   bottom: 80%;
-   left: -10%;
+   bottom: 96%;
+   left: -0.5%;
    opacity: 0;
    transition: opacity .3s;
    width: 115px;
@@ -544,7 +560,7 @@ nav{
     margin-left: -5px;
     border-width: 8px;
     border-style: solid;
-    border-color: #ffffff transparent transparent transparent;
+    border-color: #f99c06 transparent transparent transparent;
 }
 
 .know:hover .tooltip{
@@ -597,7 +613,7 @@ nav{
 }
 
 .gest-projets > .project{
-    box-shadow: 1px 3px 10px var(--text-dark);
+    box-shadow:0px 3px 10px rgba(255,255,255,0.1);
     transition: .3s all;
 }
 
@@ -621,7 +637,7 @@ nav{
 }
 
 .gest-projets > .project:hover{
-    box-shadow: 1px 3px 10px var(--primary-color-dark);
+    box-shadow: 0px 3px 10px rgba(249, 156, 6, 0.2);
     transform: scale(1.03);
 }
 
@@ -730,57 +746,19 @@ nav{
 .testimonial-gest{
     width: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     flex-wrap: wrap;
     margin-top: 2rem;
+    padding: 2rem;
     gap: 1rem;
 }
 
-.testimonial{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: .3rem;
-    padding: .6rem .6rem .6rem 0;
-    border-bottom: 3px solid var(--primary-color);
-}
-
-.testimonial .person{
-    display: flex;
-    align-items: center;
-}
-
-.person img{
-    border-radius: 50%;
-    display: block;
-    width: 50px;
-    margin-right: .7rem;
-}
-
-.person div{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: .1rem;
-}
-
-.person div h3{
-    color: var(--back-color);
-    font-weight: bold;
-}
-
-.person div span{
-    color: var(--primary-color-dark);
-    font-size: .9rem;
-    font-weight: bold;
-}
-
-.testimonial .proved{
+.proved{
     display: block;
     margin: 0;
     width: 320px;
-    margin-top: 0.8rem;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .contact-container{
@@ -957,8 +935,8 @@ nav{
         width: 300px;
     }
 
-    .testimonial .proved{
-        width: 370px;
+    .proved{
+        width: 450px;
     }
 
     .header-content{
@@ -1053,6 +1031,7 @@ nav{
         display: flex;
         align-items: center;
         background-color: var(--back-color);
+        height: 80vh;
     }
 
     .header-content{
