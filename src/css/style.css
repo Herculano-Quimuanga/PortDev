@@ -16,14 +16,14 @@
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url(Montserrat-Regular.ttf);
+    font-family: 'Figtree';
+    src: url(Figtree.ttf);
 }
-
+/*
 @font-face {
     font-family: 'Montserrat-M';
     src: url(Montserrat-Bold.ttf);
-}
+}*/
 
 html,
 body{
@@ -31,7 +31,7 @@ body{
 }
 
 body{
-    font-family: 'Montserrat';
+    font-family: 'Figtree';
     overflow-x: hidden;
 }
 
@@ -41,14 +41,14 @@ img{
 }
 
 a{
-    font-family: 'Montserrat';
+    font-family: 'Figtree';
     transition: .3s;
 }
 
 p,button
 span,
 h2,h3,h4,h5,h6,div{
-    font-family: 'Montserrat';
+    font-family: 'Figtree';
 }
 
 ul{
@@ -92,7 +92,7 @@ nav{
     font-weight: 800;
     line-height: 3.25rem;
     color: var(--text-dark);
-    font-family: 'Montserrat-M';
+    font-family: 'Figtree';
 }
 
 .section-header span{
@@ -209,7 +209,7 @@ nav{
     line-height: 2.5rem;
     color: var(--text-light);
     text-align: center;
-    font-family: 'Montserrat-M';
+    font-family: 'Figtree';
 }
 
 .header-content h1 span{
@@ -360,34 +360,20 @@ nav{
 }
 
 .desc-work{
-    background-color: var(--primary-color);
+    background-color: #22223B;
     padding: .2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 0;
-    width: 180px;
-    height: 195px;
+    width: 170px;
+    height: 170px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     border-radius: .4rem;
-}
-
-.desc-work p{
+    position: relative;
     color: var(--text-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
-}
-
-.desc-work p span{
-    font-weight: bold;
-}
-
-.desc-work h4{
-    color: var(--back-color);
-    font-size: .95rem;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -395,7 +381,7 @@ nav{
     margin-top: -5px;
     width: .4rem;
     height: 5rem;
-    background-color: var(--primary-color);
+    background-color: #22223B;
 }
 
 .experience-items > .item-work:nth-child(2) .line-unit{
@@ -404,14 +390,16 @@ nav{
 }
 
 .desc-funcion{
-    border: .3rem solid var(--primary-color);
-    padding: .8rem 1rem;
+    padding: .8rem;
     border-radius: .3rem;
-    height: 280px;
-    width: 85%;
+    height: auto;
+    gap: .5rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #22223B;
+    padding: 1rem;
 }
 
 .desc-funcion p{
@@ -424,16 +412,40 @@ nav{
 }
 
 .desc-funcion p span:nth-child(2){
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
 }
 
-.desc-funcion i{
+.desc-funcion div:first-child{
+    display: flex;
+    align-items: baseline;
+    gap: .4rem;
+    flex-direction: column;
+
+    span{
+        color: var(--text-light);
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    h5{
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}
+
+.desc-funcion div:last-child{
     display: flex;
     align-items: end;
+    justify-content: end;
     flex-direction: column;
-    margin: 0;
-    color: var(--text-dark);
-    font-size: .9rem;
+    width: 100%;
+
+    p{
+        text-align: right;
+        color: var(--text-light);
+        font-size: .90rem;
+    }
 }
 
 .tech-container{
@@ -451,7 +463,7 @@ nav{
 .tech-content .section-header{
     width: 250px;
     font-weight: 800;
-    font-family: 'Montserrat-M';
+    font-family: 'Figtree';
 }
 
 .tech-content .section-description{
@@ -890,18 +902,6 @@ nav{
     .header-container{
         padding: 5rem 3rem;
     }
-
-    .desc-funcion{
-        height: 190px;
-    }
-
-    .desc-work p{
-        font-size: .95rem;
-    }
-
-    .desc-work h4{
-        font-size: .85rem;
-    }
 }
 
 @media (width > 540px){
@@ -957,6 +957,10 @@ nav{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .desc-funcion{
+        height: 230px;
     }
 
 }
@@ -1114,7 +1118,7 @@ nav{
 
     .line-unit{
         width: 5rem;
-        height: .3rem;
+        height: .4rem;
     }
 
     .experience-items{
@@ -1123,12 +1127,9 @@ nav{
         align-items: center;
         justify-content: center;
         gap: 3rem;
-        padding: 2rem;
+        padding: 2rem 0;
     }
 
-    .desc-funcion p{
-        font-size: 1.1rem;
-    }
 }
 
 @media (width > 1800px){
