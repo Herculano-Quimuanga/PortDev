@@ -407,7 +407,8 @@ nav{
     border: .3rem solid var(--primary-color);
     padding: .8rem 1rem;
     border-radius: .3rem;
-    height: 250px;
+    height: 280px;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -485,14 +486,22 @@ nav{
     text-align: center;
 }
 
-.hexagon span{
+.hexagon span,
+.except span{
     width: 100px;
     height: 102px;
     clip-path: inherit;
-    background-color: var(--text-light);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hexagon span{
+    background-color: var(--back-color);
+}
+
+.except span{
+    background-color: var(--primary-color);
 }
 
 /*
@@ -516,15 +525,7 @@ nav{
 
 .hexagon i{
     font-size: 3rem;
-    color: var(--primary-color);
-}
-
-.except i{
-    color: var(--back-color);
-}
-
-.except svg{
-    fill: var(--back-color);
+    color: var(--text-light);
 }
 
 .i-svg{
@@ -535,6 +536,7 @@ nav{
     svg{
         width: 3rem;
         height: 3rem;
+        fill: var(--text-light);
     }
 }
 .know{
@@ -1110,10 +1112,6 @@ nav{
         flex-direction: row-reverse;
     }
 
-    .desc-funcion{
-        width: 600px;
-    }
-
     .line-unit{
         width: 5rem;
         height: .3rem;
@@ -1124,8 +1122,8 @@ nav{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 2rem;
         gap: 3rem;
+        padding: 2rem;
     }
 
     .desc-funcion p{
