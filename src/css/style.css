@@ -449,7 +449,6 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 2rem 0;
-    max-width: var(--max-width);
     padding: 3rem 1.8rem;
 }
 
@@ -473,10 +472,16 @@ nav{
     justify-content: center;
     align-self: center;
     justify-self: center;
-    flex-direction:row;
     max-width: 1024px;
-    padding: 1rem;
-    flex-wrap: wrap;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
     gap: 1rem;
 }
 
@@ -512,21 +517,6 @@ nav{
 .except span{
     background-color: var(--primary-color);
 }
-
-/*
-.hexagon::before {
-    content: '';
-    position: absolute;
-    width: calc(100% + 22px); 
-    height: calc(100% + 22px); 
-    clip-path: inherit; 
-    background-color: transparent; 
-    border: 4px solid var(--text-dark);
-    top: -4px; 
-    left: -4px; 
-    z-index: -1; 
-    transition: 0.5s ease-in-out;
-}*/
 
 .except{
     background-color: var(--back-color);
@@ -765,20 +755,18 @@ nav{
 }
 
 .testimonial-gest{
-    width: auto;
+    width: 100%;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
     padding: 2rem;
-    gap: 1rem;
+    gap: 2rem 1.5rem;
 }
 
 .proved{
-    display: block;
-    margin: 0;
-    width: 320px;
+    width: 300px;
     border-bottom: 4px solid #ffffff;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
@@ -939,6 +927,10 @@ nav{
 
     .tech-content .section-header{
         width: 350px;
+    }
+
+    .tech-items{
+        flex-direction: column;
     }
 
     .experience-content .section-header{
@@ -1127,13 +1119,36 @@ nav{
         padding: 2rem 0;
     }
 
+    .testimonial-gest{
+        align-items: start;
+        justify-content: start;
+        padding: 2rem 0;
+    }
+
+    .tech-items{
+        gap: 0;
+    }
+
+    .tech-items > .last:nth-child(1){
+        transform: translateX(-36px);
+    }
+
+    .tech-items > .last:nth-child(2){
+        transform: translate(32px, -16px);
+    }
+
 }
 
 @media (width > 1800px){
-    .section-container{
-        padding: 5rem 12rem;
+    .section-container,
+    .portfolio-container{
+        padding: 5rem 20rem;
     }
     nav{
-        padding: 3rem 12rem;
+        padding: 3rem 20rem;
+    }
+
+    .last{
+        flex-wrap: nowrap;
     }
 }
