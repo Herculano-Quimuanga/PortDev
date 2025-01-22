@@ -624,8 +624,9 @@ nav{
     border-radius: 6px;
     width: calc(320px + 2%); 
     height: 550px;  
-    box-shadow:0px 3px 10px rgba(255,255,255,0.1);
+    
     transition: .3s all;
+    background-color: #22223B;
 }
 
 .gest-projets > .project::after,
@@ -648,7 +649,6 @@ nav{
 }
 
 .gest-projets > .project:hover{
-    box-shadow: 0px 3px 10px rgba(249, 156, 6, 0.2);
     transform: scale(1.03);
 }
 
