@@ -19,11 +19,6 @@
     font-family: 'Figtree';
     src: url(Figtree.ttf);
 }
-/*
-@font-face {
-    font-family: 'Montserrat-M';
-    src: url(Montserrat-Bold.ttf);
-}*/
 
 html,
 body{
@@ -585,6 +580,7 @@ nav{
     gap: 2rem 0;
     background-color: var(--back-color);
     padding: 5rem 1.8rem;
+    position: relative;
 }
 
 .portfolio-content{
@@ -622,7 +618,7 @@ nav{
     flex-direction: column;
     padding: 1.5rem 1.2rem .8rem 1.2rem;
     border-radius: 6px;
-    width: calc(320px + 2%); 
+    width: calc(280px + 2%); 
     height: 550px;  
     transition: .3s all;
     background-color: #22223B;
@@ -658,8 +654,8 @@ nav{
 
 .project img{
     display: block;
-    width: 94%;
-    height: 240px;
+    width: 90%;
+    height: 200px;
     transform: scale(1.08);
     border-radius: 6px;
     margin-bottom: 2rem;
@@ -933,6 +929,19 @@ nav{
     .header-container{
         padding: 5rem 3rem;
     }
+
+    .project{
+        width: calc(320px + 2%); 
+    }
+
+    .project img{
+        width: 94%;
+        height: 240px;
+    }
+
+    .carousel-inner{
+        padding-left: 4rem;
+    }
 }
 
 @media (width > 540px){
@@ -996,6 +1005,10 @@ nav{
 
     .desc-funcion{
         height: 230px;
+    }
+
+    .carousel-inner{
+        padding-left: 8rem;
     }
 
 }
