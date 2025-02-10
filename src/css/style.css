@@ -615,7 +615,7 @@ nav{
     justify-self: start;
     justify-content: start;
     flex-direction: column;
-    padding: 1.5rem 1.2rem .8rem 1.2rem;
+    padding: 1.8rem 1.2rem .8rem 1.2rem;
     border-radius: 6px;
     width: calc(280px + 2%); 
     height: 550px;  
@@ -653,9 +653,8 @@ nav{
 
 .project img{
     display: block;
-    width: 90%;
-    height: 200px;
-    transform: scale(1.08);
+    width: 94%;
+    transform: scale(1);
     border-radius: 6px;
     margin-bottom: 2rem;
 }
